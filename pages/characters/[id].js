@@ -2,6 +2,17 @@ import { useRouter } from "next/router";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import useSWR from "swr";
+import Link from "next/link";
+import styled from "styled-components";
+
+const StyledBackLink = styled(Link)`
+  color: var(--color-light);
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid var(--color-light);
+  border-radius: 10px;
+`;
 
 export default function Character() {
   const router = useRouter();
@@ -21,6 +32,7 @@ export default function Character() {
         eyeColor={data.eye_color}
         birthYear={data.birth_year}
       />
+      <StyledBackLink href="/">Back</StyledBackLink>
     </Layout>
   );
 }
