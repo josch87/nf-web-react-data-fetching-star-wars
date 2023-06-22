@@ -21,7 +21,7 @@ export default function HomePage() {
           const match = character.url.match(regex);
           const id = match ? match[1] : null;
           return (
-            <li key={character.url}>
+            <li key={id}>
               <StyledLink href={`/characters/${id}`}>
                 {character.name}
               </StyledLink>
