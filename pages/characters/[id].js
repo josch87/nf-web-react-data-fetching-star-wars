@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import useSWR from "swr";
-import { useSWRConfig } from "swr";
 
 export default function Character() {
   const router = useRouter();
